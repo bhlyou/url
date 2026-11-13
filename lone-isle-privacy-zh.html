@@ -26,7 +26,10 @@
 <body>
 <p class="lang"><a href="lone-isle-privacy.html">English</a></p>
 <h1>隐私政策 — 沧海孤岛</h1>
-<p class="updated">最后更新：2026-10-26</p>
+<p class="updated">最后更新：2026-11-13</p>
+
+<h2>关于本应用</h2>
+<p><strong>沧海孤岛（Lone Isle）</strong>是一款单机海岛即时战略游戏，全程离线运行。没有账号、没有登录、没有联机，也没有广告、订阅或内购。</p>
 
 <h2>我们收集什么数据</h2>
 <p><strong>沧海孤岛（Lone Isle）</strong>不收集任何个人身份信息（PII）。</p>
@@ -35,7 +38,11 @@
   <li>不收集设备标识符（IDFA / IDFV）</li>
   <li>不收集位置信息</li>
   <li>不收集联系人、相册、麦克风、相机数据</li>
+  <li>不上传使用统计、崩溃报告或诊断信息</li>
 </ul>
+
+<h2>系统权限</h2>
+<p>本应用不申请任何系统权限：不打开相机与麦克风，不读取相册与通讯录，也不请求位置或通知权限。</p>
 
 <h2>我们如何使用数据</h2>
 <p>所有功能完全在设备本地运行，不上传任何数据到服务器。</p>
@@ -45,9 +52,11 @@
 
 <h2>数据存储</h2>
 <ul>
-  <li>用户偏好设置使用 <code>UserDefaults</code> / <code>SwiftData</code>，仅存于设备本地。</li>
+  <li>对局存档以 JSON 文件写在应用自己的 Application Support 目录里，仅存于本机。</li>
+  <li>少量偏好设置（例如教程是否已完成）使用 <code>UserDefaults</code> 保存。</li>
   <li>不使用 iCloud 同步。</li>
   <li>不导出数据到任何外部服务。</li>
+  <li>删除应用即删除这些文件。</li>
 </ul>
 
 <h2>儿童隐私</h2>
