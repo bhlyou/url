@@ -29,41 +29,43 @@
 <p class="updated">Last updated: 2026-11-13</p>
 
 <h2>About this app</h2>
-<p><strong>Lone Isle</strong> is a single-player island real-time strategy game. It runs entirely offline. There is no account, no sign-in, no multiplayer, no advertising, no subscription and no in-app purchase.</p>
+<p><strong>Lone Isle</strong> is a single-player island real-time strategy game. The game itself works with no connection. There is no account, no sign-in, no multiplayer, no advertising and no in-app purchase.</p>
 
 <h2>What data we collect</h2>
-<p><strong>Lone Isle</strong> does not collect any personally identifiable information (PII).</p>
+<p>We do not collect your name, email, phone number, address, precise location, contacts, photos, microphone or camera data, and we never read your advertising identifier (IDFA).</p>
+<p>The app uses <strong>Google Analytics for Firebase</strong> to understand how the game is played. It sends:</p>
 <ul>
-  <li>No name, email, phone number, or address</li>
-  <li>No device identifiers (IDFA / IDFV)</li>
-  <li>No location data</li>
-  <li>No contacts, photos, microphone, or camera data</li>
-  <li>No usage analytics, crash reports or diagnostics uploaded to us</li>
+  <li>Gameplay events: when a match starts and finishes, with game mode (tutorial / campaign / skirmish), mission id, civilization, map, result and duration.</li>
+  <li>Basic app and device context that Firebase attaches automatically: app version, device model, operating system version, language, and a randomly generated app-instance ID.</li>
 </ul>
+<p>No text you type, no save file and no personal identifier is sent. The data is not linked to your identity and is not used to track you across other apps or websites.</p>
 
 <h2>Permissions</h2>
-<p>The app requests no system permission. It never opens the camera or microphone, never reads your photo library or contacts, and never asks for location or notifications.</p>
+<p>The app requests no system permission. It never opens the camera or microphone, never reads your photo library or contacts, and never asks for location, notifications or App Tracking Transparency.</p>
 
 <h2>How we use data</h2>
-<p>Everything runs entirely on your device. No data is ever uploaded to any server.</p>
+<p>Analytics is used only to see which modes are played and where players stop, so we can improve the game. It is never used for advertising or profiling, and there is no advertising SDK in the app.</p>
 
 <h2>Third-party SDKs</h2>
-<p><strong>Lone Isle</strong> integrates no third-party analytics, advertising, or tracking SDKs.</p>
+<p>The only third-party SDK is <strong>Google Analytics for Firebase</strong> (<code>FirebaseAnalyticsWithoutAdIdSupport</code>, which does not read the advertising identifier). Google processes this data on our behalf under the
+<a href="https://policies.google.com/privacy">Google Privacy Policy</a> and the
+<a href="https://firebase.google.com/support/privacy">Firebase privacy and security terms</a>. No other analytics, advertising or tracking SDK is linked into the app.</p>
 
 <h2>Data storage</h2>
 <ul>
   <li>Saved matches are written as JSON files in the app’s own Application Support folder, on this device only.</li>
   <li>Small preferences (such as whether the tutorial has been completed) are stored with <code>UserDefaults</code>.</li>
+  <li>Analytics events are sent to Google’s servers and kept according to the retention settings of our Firebase project.</li>
   <li>No iCloud sync.</li>
-  <li>No export to any external service.</li>
-  <li>Deleting the app deletes these files.</li>
+  <li>No export of your saves to any external service.</li>
+  <li>Deleting the app deletes the local files.</li>
 </ul>
 
 <h2>Children's privacy</h2>
 <p>This app is not directed to children under 13 and collects no age information.</p>
 
 <h2>Your rights</h2>
-<p>Because no data is collected, there is no data to access, delete, or export.</p>
+<p>You can ask us what analytics data is associated with your app instance, ask us to delete it, or object to analytics processing, by writing to the address below. Your saves never leave the device, so there is nothing to export or delete on our side.</p>
 
 <h2>Contact</h2>
 <p>For privacy questions, contact: <a href="mailto:hailubai@163.com">hailubai@163.com</a></p>
@@ -78,11 +80,11 @@
   <thead><tr><th>Data type</th><th>Collected</th><th>Used for tracking</th><th>Linked to you</th></tr></thead>
   <tbody>
     <tr><td>Contact info</td><td>No</td><td>—</td><td>—</td></tr>
-    <tr><td>Identifiers</td><td>No</td><td>—</td><td>—</td></tr>
-    <tr><td>Usage data</td><td>No</td><td>—</td><td>—</td></tr>
+    <tr><td>Identifiers</td><td>No (no IDFA; app-instance ID only)</td><td>No</td><td>No</td></tr>
+    <tr><td>Usage data — Product Interaction</td><td>Yes</td><td>No</td><td>No</td></tr>
     <tr><td>Diagnostics</td><td>No</td><td>—</td><td>—</td></tr>
   </tbody>
 </table>
-<p><strong>Conclusion:</strong> every item on the App Privacy form is “Data Not Collected”.</p>
+<p><strong>Conclusion:</strong> the App Privacy form declares Usage Data → Product Interaction, not used for tracking and not linked to the user. Everything else is “Data Not Collected”.</p>
 </body>
 </html>

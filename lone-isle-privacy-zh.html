@@ -29,41 +29,43 @@
 <p class="updated">最后更新：2026-11-13</p>
 
 <h2>关于本应用</h2>
-<p><strong>沧海孤岛（Lone Isle）</strong>是一款单机海岛即时战略游戏，全程离线运行。没有账号、没有登录、没有联机，也没有广告、订阅或内购。</p>
+<p><strong>沧海孤岛（Lone Isle）</strong>是一款单机海岛即时战略游戏，不联网也能正常游玩。没有账号、没有登录、没有联机，也没有广告、订阅或内购。</p>
 
 <h2>我们收集什么数据</h2>
-<p><strong>沧海孤岛（Lone Isle）</strong>不收集任何个人身份信息（PII）。</p>
+<p>我们不收集你的姓名、邮箱、电话、地址、精确位置、通讯录、相册、麦克风或相机数据，也从不读取广告标识符（IDFA）。</p>
+<p>应用使用 <strong>Google Analytics for Firebase</strong> 了解玩法情况，会上报：</p>
 <ul>
-  <li>不收集姓名、邮箱、电话、地址</li>
-  <li>不收集设备标识符（IDFA / IDFV）</li>
-  <li>不收集位置信息</li>
-  <li>不收集联系人、相册、麦克风、相机数据</li>
-  <li>不上传使用统计、崩溃报告或诊断信息</li>
+  <li>对局事件：开局与结束，附带模式（教程 / 战役 / 自由对战）、关卡、文明、地图、胜负与用时。</li>
+  <li>Firebase 自动附带的基础上下文：应用版本、设备型号、系统版本、语言，以及随机生成的应用实例 ID。</li>
 </ul>
+<p>不上传你输入的任何文字、不上传存档，也不上传可识别个人身份的标识。这些数据不与你的身份关联，也不用于跨 App 或跨网站追踪。</p>
 
 <h2>系统权限</h2>
-<p>本应用不申请任何系统权限：不打开相机与麦克风，不读取相册与通讯录，也不请求位置或通知权限。</p>
+<p>本应用不申请任何系统权限：不打开相机与麦克风，不读取相册与通讯录，也不请求位置、通知或 ATT 追踪授权。</p>
 
 <h2>我们如何使用数据</h2>
-<p>所有功能完全在设备本地运行，不上传任何数据到服务器。</p>
+<p>统计只用于判断哪些模式被玩、玩家在哪一关停下，从而改进游戏；不用于广告或用户画像，应用内也没有广告 SDK。</p>
 
 <h2>第三方 SDK</h2>
-<p>不集成任何第三方分析、广告或追踪 SDK。</p>
+<p>唯一的第三方 SDK 是 <strong>Google Analytics for Firebase</strong>（<code>FirebaseAnalyticsWithoutAdIdSupport</code>，不读取广告标识符）。Google 作为受托方按
+<a href="https://policies.google.com/privacy">Google 隐私权政策</a>与
+<a href="https://firebase.google.com/support/privacy">Firebase 隐私与安全条款</a>处理这些数据。应用内没有其他分析、广告或追踪 SDK。</p>
 
 <h2>数据存储</h2>
 <ul>
   <li>对局存档以 JSON 文件写在应用自己的 Application Support 目录里，仅存于本机。</li>
   <li>少量偏好设置（例如教程是否已完成）使用 <code>UserDefaults</code> 保存。</li>
+  <li>统计事件会发送到 Google 服务器，按我们 Firebase 项目的保留期保存。</li>
   <li>不使用 iCloud 同步。</li>
-  <li>不导出数据到任何外部服务。</li>
-  <li>删除应用即删除这些文件。</li>
+  <li>不导出存档到任何外部服务。</li>
+  <li>删除应用即删除本机文件。</li>
 </ul>
 
 <h2>儿童隐私</h2>
 <p>本应用不针对 13 岁以下儿童，不收集任何年龄信息。</p>
 
 <h2>您的权利</h2>
-<p>由于不收集任何数据，无需提供数据访问 / 删除 / 导出接口。</p>
+<p>你可以来信查询与你应用实例相关的统计数据、要求删除，或反对统计处理。存档从不离开设备，因此我们这边没有可导出或删除的存档。</p>
 
 <h2>联系方式</h2>
 <p>如有隐私问题，请联系：<a href="mailto:hailubai@163.com">hailubai@163.com</a></p>
@@ -78,11 +80,11 @@
   <thead><tr><th>数据类型</th><th>是否收集</th><th>用于追踪</th><th>关联身份</th></tr></thead>
   <tbody>
     <tr><td>联系信息</td><td>否</td><td>—</td><td>—</td></tr>
-    <tr><td>标识符</td><td>否</td><td>—</td><td>—</td></tr>
-    <tr><td>使用数据</td><td>否</td><td>—</td><td>—</td></tr>
+    <tr><td>标识符</td><td>否（不含 IDFA，仅应用实例 ID）</td><td>否</td><td>否</td></tr>
+    <tr><td>使用数据 — 产品交互</td><td>是</td><td>否</td><td>否</td></tr>
     <tr><td>诊断</td><td>否</td><td>—</td><td>—</td></tr>
   </tbody>
 </table>
-<p><strong>结论：</strong>App Store Connect “App 隐私”表单全部勾选“未收集数据”。</p>
+<p><strong>结论：</strong>App 隐私表单勾选「使用数据 → 产品交互」，不用于追踪、不关联身份；其余仍为「未收集数据」。</p>
 </body>
 </html>
